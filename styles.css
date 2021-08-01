@@ -1,0 +1,51 @@
+body {
+    background-color: rgba(0, 0, 139, 0.315);
+}
+ul {
+    list-style-type: none;
+    background-color: hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: darkgoldenrod;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.greenbg{background: mintcream;
+border: 1px solid red;}
+
+
+.thisStoryIsFun{
+    color: green;
+    background: yellow;
+    width: 50%;
+}
+.that_story_is_not{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+.Header1 {
+    color:darkgray
+}
+.Header2 {
+    color: darksalmon;
+}
+.ParagraphOfH1 {
+    color: deepskyblue;
+}
+.ParagraphOfH2 {
+    color: gold;
+}
+footer {
+    background-color: rgb(200, 204, 200);
+    text-align: center;
+}
