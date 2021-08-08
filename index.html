@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
+    <script src="app.js"></script>
     <title>Hello!</title>
 </head>
     <body>
             <nav>
-                <ul>
-                    <li>What am I doing here?</li>
-                    <li>What's the point?</li>
-                    <li>How many funfacts you know?</li>
-                    <li>Bunny to make you smile</li>
+                <button type="menu" id="menu" onclick="myFunction()">Menu</button> <br>
+                <ul id="menuItems">
+                    <li><a href="#firstPart"> What am I doing here? </a></li>
+                    <li><a href="#secondPart">What's the point?</a></li>
+                    <li><a href="#funfacts">How many funfacts you know?</a></li>
+                    <li><a href="#image">Bunny to make you smile</a></li>
                 </ul>
-            </nav>
+            </nav> <br>
         <main>
             <div>
             <section class="mainSection">
                 <h1>My little website</h1>
                 <hr>
-                <h2>What am I doing here?</h2>
+                <h2 id="firstPart">What am I doing here?</h2>
                 <p>At the moment, I am learning about HTML and CSS, 
                     experimenting with different styles, and having fun! </p>
-                <h2>What's the point?</h2>
+                <h2 id="secondPart">What's the point?</h2>
                 <p>Final goal is to learn enough to create a nice 
                     looking website, and then expand my knowledge with other languages. </p>
-                <h2>Funfacts!</h2>
-                <form>
-                    First country that had cars is <input type="text" size="20" name="firstCar" max="30"> <br>
-                    Octopuses have <input type="number" name="octopuses" min="0" max="5" step="0.5"> hearts! <br>
-                </form>
-                <p>Only mammals that can actually fly are</p>
-                <form action="quiz">
+                <h2 id="funfacts">Funfacts!</h2>
+                
+                <form name="quiz">
+                    <label for="form1">First country that had cars is</label> <input type="text" size="20" name="firstCar"> 
+                    <button type="submit" onclick="validateText()">Submit</button><br>
+                    <label for="form2">Octopuses have</label> <input type="number" name="octopuses" min="0" max="5" step="1"> hearts! 
+                    <button type="submit" onclick="validateNumber()">Submit</button><br>
+                    <label for="form3">Only mammals that can fly are</label> <br>
                      <input type="radio" name="answerq2" value="answer1"> Bats <br>
-                     <input type="radio" name="answerq2" value="answer2"> Pinguins <br>
+                     <input type="radio" name="answerq2" value="answer2"> Penguins <br>
                      <input type="radio" name="answerq2" value="answer3"> Elephants <br>
+                    <button type="submit" onclick="validateRadio ()">Submit</button>
                 </form>
-                <p>You can learn more funfacts <a href="https://www.google.com/" target="_blank">here</a>! </p>
 
-                <img src="images/pexels-anna-shvets-4588428.jpg" alt="Bunny reading" class="image">
+                <button onclick="finishFunction()">Finish</button>
+                <p>You can learn more funfacts <a href="https://www.google.com/" target="_blank" id="here">here!</a></p> <br>
+    
+                <img src="images/pexels-anna-shvets-4588428.jpg" alt="Bunny reading" id="image">
             </section>
         </div>
         </main>
