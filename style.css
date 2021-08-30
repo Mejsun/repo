@@ -1,0 +1,115 @@
+header {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    background-position: relative;
+    background: rgb(255,255,255);
+    background: linear-gradient(193deg, rgba(255,255,255,1) 0%, rgba(218,217,215,1) 100%);
+    width: screen-size;
+}
+.wrapper {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: auto;
+}
+.container {
+ color: black
+}
+.Menu, .more {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top: 50px;
+}
+.menuItem,.more {
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: grey;
+    margin-left: 2px;
+    display: inline-block;
+}
+.menuItem:hover, .more:hover {
+    border-bottom: rgb(46, 46, 165) solid 3px;
+    cursor: pointer;
+}
+.more {
+    margin-left: 50px;
+    position: fixed;
+    border: 0px;
+    margin: 0px;
+    padding-left: 50px;
+}
+.submenu {
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+}
+.submenuItem {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+li {
+    float: left;
+    display: inline;
+    padding: 0px;
+}
+#watchLive {
+    position: absolute;
+    top:10px;
+    right: 0px;
+    background: rgb(208,0,0);
+    background: linear-gradient(0deg, rgba(208,0,0,1) 45%, rgba(255,16,16,1) 85%);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: 0px none;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+ /* 
+    code {
+  background: blue;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+section {
+  float: left;
+  width: 30%;
+}
+footer {
+  clear: both;
+  margin-bottom: 0;
+}
+} */
+
+.adbanner {
+    height: 500px;
+}
+
+main {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,208,215,1) 100%);
+}
