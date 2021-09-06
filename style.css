@@ -1,5 +1,10 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
 header {
-    height: 140px;
+    height: 150px;
     display: flex;
     justify-content: center;
     background-position: relative;
@@ -9,19 +14,35 @@ header {
 }
 .wrapper {
     position: relative;
-    right: 0;
-    left: 0;
     width: auto;
 }
 .container {
- color: black
+ color: black;
+ width: auto;
+ 
+}
+img::before {
+    content: "";
+    position: absolute;
+    left: calc(((100vw - 972px) / 2) * -1);
+    height: calc(100% + 40px);
+    bottom: 48%;
+    width: calc(100vw - 15px);
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(182deg,hsla(0,0%,100%,0) 85%,hsla(0,0%,100%,.7)),linear-gradient(90deg,hsla(0,0%,100%,.8) 10%,hsla(0,0%,100%,.05));
+}
+img {
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 35px;
 }
 .Menu, .more {
     margin-bottom: 0px;
     padding-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 47px;
 }
-.menuItem,.more {
+.menuItem,.more, .submenuItem {
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
@@ -34,16 +55,16 @@ header {
     cursor: pointer;
 }
 .more {
-    margin-left: 50px;
     position: fixed;
     border: 0px;
     margin: 0px;
-    padding-left: 50px;
+    float: inline-block;
 }
 .submenu {
     float: right;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
+    
 }
 .submenuItem {
     padding-top: 10px;
@@ -78,38 +99,117 @@ li {
     font-size: 15px;
     cursor: pointer;
 }
-
- /* 
-    code {
-  background: blue;
-  border-radius: 6px;
-  color: #fff;
-  display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-  padding: 24px 15px;
-  text-align: center;
+summary::marker {
+    font-weight: lighter;
 }
-header,
-section,
-aside,
-footer {
-  margin: 0 1.5% 24px 1.5%;
+th, td {
+    border-bottom: solid black 1px;
+    width: 100px;
+    text-align: left;
+    position: inherit;
+    margin: 5px;
 }
-section {
-  float: left;
-  width: 30%;
+table {
+    position: fixed;
+    width: 150px;
+    margin-top: 10px;
+    text-align: left;
 }
-footer {
-  clear: both;
-  margin-bottom: 0;
+.adBanner {
+    padding: 25px;
+    text-align: center;
 }
-} */
-
-.adbanner {
-    height: 500px;
-}
-
 main {
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,208,215,1) 100%);
+    display: flex;
+    background-position: relative;
+    width: screen-size;
+    justify-content: center;
+}
+h1 {
+    text-transform: uppercase;
+    color: rgb(70, 67, 67);
+    letter-spacing: -1px;
+    font-size: 35px;
+    font-stretch: ultra-condensed;
+    line-height: 50px;
+    font-weight: lighter;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapperMain {
+    position: relative;
+    width: auto;
+    display: block;
+}
+.containerTS {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 980px;
+    overflow: hidden;
+}
+.cell:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+    background:rgb(238, 236, 236);
+}
+.cell:hover img {
+    transform: scale(1.1);
+    overflow: hidden;
+    clip: rect(100px,50px,50px,50px);
+   
+}
+
+.breaking:hover {
+    background: rgb(255,245,0);
+    background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
+}
+.cell {
+    color: grey;
+    background-color: white;
+    border: rgb(238, 236, 236) solid 5px;
+    text-align: left;
+    height: 400px;
+    width: auto;
+    font-weight: light;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.breaking {
+    grid-row: 1;
+    grid-column: 1/4;
+    background: rgb(255,245,0);
+    background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
+    color: black;
+    font-weight:500;
+    font-size: 30px;
+}
+.cell img {
+    margin: 0px;
+    padding: 0px;
+    height: 40%;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+    object-fit: cover;
+}
+.breaking img {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    width: 67%;
+    height: 100%;
+    
+}
+.breaking p {
+    margin-left: 650px;
+}
+.cell p {
+    padding: 30px;
+
 }
