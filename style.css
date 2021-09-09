@@ -19,18 +19,6 @@ header {
 .container {
  color: black;
  width: auto;
- 
-}
-img::before {
-    content: "";
-    position: absolute;
-    left: calc(((100vw - 972px) / 2) * -1);
-    height: calc(100% + 40px);
-    bottom: 48%;
-    width: calc(100vw - 15px);
-    z-index: -1;
-    pointer-events: none;
-    background-image: linear-gradient(182deg,hsla(0,0%,100%,0) 85%,hsla(0,0%,100%,.7)),linear-gradient(90deg,hsla(0,0%,100%,.8) 10%,hsla(0,0%,100%,.05));
 }
 img {
     margin-top: 20px;
@@ -64,12 +52,9 @@ img {
     float: right;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
-    
 }
 .submenuItem {
-    padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -106,13 +91,13 @@ th, td {
     border-bottom: solid black 1px;
     width: 100px;
     text-align: left;
-    position: inherit;
     margin: 5px;
 }
 table {
     position: fixed;
     width: 150px;
-    margin-top: 10px;
+    margin-top: 0;
+    padding-top: 0px;
     text-align: left;
 }
 .adBanner {
@@ -136,6 +121,7 @@ h1 {
     line-height: 50px;
     font-weight: lighter;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
 }
 .wrapperMain {
     position: relative;
@@ -150,20 +136,20 @@ h1 {
     grid-gap: 20px;
     width: 980px;
     overflow: hidden;
+    padding: 10px 10px 10px 0px;
 }
 .cell:hover {
     text-decoration: underline;
     cursor: pointer;
     transition: 0.5s;
-    background:rgb(238, 236, 236);
+    background:inherit;
 }
 .cell:hover img {
     transform: scale(1.1);
     overflow: hidden;
-    clip: rect(100px,50px,50px,50px);
-   
+    transition: 0.5s ease;
+    display: inline-block;
 }
-
 .breaking:hover {
     background: rgb(255,245,0);
     background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
@@ -178,6 +164,9 @@ h1 {
     font-weight: light;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    box-shadow:  5px 5px 15px -3px #ccc;
+    margin-bottom: 5px;
 }
 .breaking {
     grid-row: 1;
@@ -195,7 +184,6 @@ h1 {
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
-    overflow: hidden;
     object-fit: cover;
 }
 .breaking img {
@@ -204,6 +192,7 @@ h1 {
     margin: 0px;
     width: 67%;
     height: 100%;
+    overflow: hidden;
     
 }
 .breaking p {
@@ -213,3 +202,84 @@ h1 {
     padding: 30px;
 
 }
+.containerCV {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 980px;
+    overflow: hidden;
+    padding: 10px 10px 10px 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.buttonLM {
+    position: relative;
+}
+.loadMore {
+    border-radius: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: rgb(38, 38, 126);
+    width: 115px;
+    height: 43px;
+    border: 1px solid rgb(38, 38, 126);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.loadMore:hover {
+    color: white;
+    background-color: rgb(38, 38, 126);
+    cursor: pointer;
+}
+.containerVideos {
+    background-color: rgb(38, 38, 126);
+    color: white;
+    height: fit-content;
+    padding-right: 0px;
+    margin-right: 0px;
+    width: 980px;
+    overflow-x: scroll;
+}
+.containerVideos h1 {
+    color: white;
+    font-weight: lighter;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    
+}
+.videosMI {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: white;
+    margin-right: 40px;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    margin-left: -20px;
+    display: inline-block;
+}
+.videosMI:hover {
+    border-bottom: 2px solid white;
+}
+.videosMenu {
+    border-bottom: 1px solid rgb(247, 247, 247);
+    display: inline-block;
+    width: 1000px;
+    margin-left: 25px;
+    position: relative
+}
+video {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 250px;
+    height: 150px;
+    margin-left: 20px;
+    padding-left: 0px;
+}
+
+/* to fix: menu in the header goes over articles, shimmer border, 
+images in cells to not resize, width to be adjustable, 
+videos menu not to move, sccroll horizontally videos*/
