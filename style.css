@@ -154,7 +154,7 @@ h1 {
     background: rgb(255,245,0);
     background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
 }
-.cell {
+.cell, .cellA, .cellF, .cellAS {
     color: grey;
     background-color: white;
     border: rgb(238, 236, 236) solid 5px;
@@ -202,7 +202,7 @@ h1 {
     padding: 30px;
 
 }
-.containerCV {
+.gridCV {
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -242,14 +242,13 @@ h1 {
     margin-right: 0px;
     width: 980px;
     overflow-x: scroll;
+    margin-top: 30px;
 }
 .containerVideos h1 {
     color: white;
     font-weight: lighter;
     padding-bottom: 0;
     margin-bottom: 0px;
-    padding-top: 20px;
-    
 }
 .videosMI {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -279,7 +278,182 @@ video {
     margin-left: 20px;
     padding-left: 0px;
 }
+.gridA {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    width: 980px;
+    overflow: hidden;
+    padding: 10px 10px 10px 0px;
+}
+.cellA:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background:inherit;
+}
+.cellA:hover h2 {
+    color: black;
+    text-decoration: none;
+}
+.cellA:hover p{
+    text-decoration: underline;
+}
+.cellA img {
+    border-radius: 50%;
+    padding: 50px;
+    height: 25%;
+    width: 50%;
+    margin:auto;
+    display: flex;
+    
+}
+.cellA h2 {
+    font-size: 15px;
+    font-weight: lighter;
+    color:rgb(4, 4, 167);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:0;
+    margin: 0;
+}
+.cellA {
+    text-align: center;
+    height: 600px;
+}
+.cellA p{
+    margin:0;
+    padding: 0px 20px 0px 20px;
+}
+.cell3A {
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+}
+.gridF {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 980px;
+    overflow: hidden;
+    padding: 10px 10px 10px 0px;
+}
+.cellF:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+    background:inherit;
+}
+.cellF:hover img {
+    transform: scale(1.1);
+    overflow: hidden;
+    transition: 0.5s ease;
+    display: inline-block;
+}
+.cellF img {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.cellF {
+    height: 250px;
+}
+.cellF p {
+    padding-left: 500px;
+    font-size: 30px;
+    margin: auto;
+    padding-top: 50px;
+}
+.gridAS {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: auto;
+    width: 980px;
+    grid-gap: 20px;
+}
+.cellAS img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.cellAS {
+    height: 550px;
+}
+.cellAS p {
+    padding: 50px 25px 50px 25px;
+    font-size: 30px;
+    margin: auto;
+}
+
+.containerMR {
+    height: auto;
+    display: block;
+    width: 980px;
+    overflow: hidden;
+    padding: 10px 10px 10px 0px;
+}
+.gridMR {
+    color: grey;
+    background-color: white;
+    border: rgb(238, 236, 236) solid 5px;
+    text-align: left;
+    height: 400px;
+    width: auto;
+    font-weight: light;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    box-shadow:  5px 5px 15px -3px #ccc;
+    margin-bottom: 5px;
+    height: 320px;
+}
+.listMR {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr;
+    grid-gap: 20px;
+}
+.cellMR {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.number {
+    font-size: 28px;
+    font-weight: lighter;
+    color: rgb(10, 10, 161);
+    font-style: normal;
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+    float:left;
+}
+hr {
+    border: rgb(228, 228, 228) 0.5px solid;
+}
+.cellMR:hover p{
+    text-decoration: underline;
+    cursor: pointer;
+}
+em:hover{
+    text-decoration: none;
+}
+.cellMR p {
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 0;
+}
 
 /* to fix: menu in the header goes over articles, shimmer border, 
 images in cells to not resize, width to be adjustable, 
-videos menu not to move, sccroll horizontally videos*/
+videos menu not to move, sccroll horizontally videos, 
+numbers and text to be in line for must read*/
