@@ -391,13 +391,12 @@ video {
     font-size: 30px;
     margin: auto;
 }
-
 .containerMR {
     height: auto;
     display: block;
     width: 980px;
     overflow: hidden;
-    padding: 10px 10px 10px 0px;
+    padding: 10px 10px 50px 0px;
 }
 .gridMR {
     color: grey;
@@ -428,7 +427,7 @@ video {
     padding-bottom: 10px;
 }
 .number {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: lighter;
     color: rgb(10, 10, 161);
     font-style: normal;
@@ -439,6 +438,7 @@ video {
 }
 hr {
     border: rgb(228, 228, 228) 0.5px solid;
+    margin-top: 22px;
 }
 .cellMR:hover p{
     text-decoration: underline;
@@ -448,12 +448,104 @@ em:hover{
     text-decoration: none;
 }
 .cellMR p {
-    display: inline-block;
     padding-left: 30px;
     padding-top: 0;
+    display: flex;
+    margin: auto;
+    
 }
-
+.containerFooter {
+    display: block;
+    margin: auto;
+    width: 980px;
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+.socialMedia {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 980px;
+    display: block;
+    margin-left: -35px;
+}
+.footerSMLI {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 40px;
+}
+.footerSM img {
+    padding: 0px;
+    margin: 0px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    filter: grayscale(100%);
+}
+.footerSMLI:hover img {
+    filter: grayscale(0%);
+}
+.footerSMLI:hover {
+    text-decoration: underline;
+}
+.gridFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.headingFooter {
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.footerList {
+    padding:0px;
+    padding-left: 25px;
+}
+.footerListLI {
+    width: 230px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    display: block;
+}
+.footerListLI:hover {
+    background-color: rgb(218, 218, 218) ;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footerOther {
+    font-size: 14px;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+.FOlistLI {
+    margin-right: 70px;
+    padding: 5px;
+    margin-left: -40px;
+}
+.FOlistLI:hover {
+    background-color: rgb(218, 218, 218) ;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footerimg {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 15px;
+}
+.copyright{
+   
+    display: flex;
+    margin: auto;
+    padding-top: 8px;
+}
+.other {
+    padding-bottom: 30px;
+}
 /* to fix: menu in the header goes over articles, shimmer border, 
 images in cells to not resize, width to be adjustable, 
-videos menu not to move, sccroll horizontally videos, 
-numbers and text to be in line for must read*/
+videos menu not to move, sccroll horizontally videos/
