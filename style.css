@@ -14,11 +14,6 @@ header {
 }
 .wrapper {
     position: relative;
-    width: auto;
-}
-.container {
- color: black;
- width: auto;
 }
 img {
     margin-top: 20px;
@@ -26,8 +21,6 @@ img {
     height: 35px;
 }
 .Menu, .more {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
     margin-top: 47px;
 }
 .menuItem,.more, .submenuItem {
@@ -71,41 +64,30 @@ li {
     position: absolute;
     top:10px;
     right: 0px;
-    background: rgb(208,0,0);
     background: linear-gradient(0deg, rgba(208,0,0,1) 45%, rgba(255,16,16,1) 85%);
     text-align: center;
     border-radius: 5px;
     color: white;
     font-weight: 600;
-    border: 0px none;
+    border: none;
     padding: 10px;
     width: 100px;
     height: 40px;
     font-size: 15px;
     cursor: pointer;
 }
-summary::marker {
-    font-weight: lighter;
-}
 th, td {
     border-bottom: solid black 1px;
-    width: 100px;
-    text-align: left;
     margin: 5px;
 }
 table {
     position: fixed;
-    width: 150px;
-    margin-top: 0;
-    padding-top: 0px;
-    text-align: left;
 }
 .adBanner {
     padding: 25px;
     text-align: center;
 }
 main {
-    background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,208,215,1) 100%);
     display: flex;
     background-position: relative;
@@ -115,11 +97,9 @@ main {
 h1 {
     text-transform: uppercase;
     color: rgb(70, 67, 67);
-    letter-spacing: -1px;
     font-size: 35px;
     font-stretch: ultra-condensed;
     line-height: 50px;
-    font-weight: lighter;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 10px;
 }
@@ -128,7 +108,7 @@ h1 {
     width: auto;
     display: block;
 }
-.containerTS {
+.containerTS, .gridCV {
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -151,17 +131,14 @@ h1 {
     display: inline-block;
 }
 .breaking:hover {
-    background: rgb(255,245,0);
     background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
 }
 .cell, .cellA, .cellF, .cellAS {
     color: grey;
     background-color: white;
     border: rgb(238, 236, 236) solid 5px;
-    text-align: left;
     height: 400px;
     width: auto;
-    font-weight: light;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
@@ -171,7 +148,6 @@ h1 {
 .breaking {
     grid-row: 1;
     grid-column: 1/4;
-    background: rgb(255,245,0);
     background: linear-gradient(180deg, rgba(255,245,0,1) 0%, rgba(245,198,79,1) 100%);
     color: black;
     font-weight:500;
@@ -179,44 +155,41 @@ h1 {
 }
 .cell img {
     margin: 0px;
-    padding: 0px;
+    padding: 0;
     height: 40%;
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
-    object-fit: cover;
 }
-.breaking img {
-    float: left;
-    padding: 0px;
+.imgmain {
     margin: 0px;
+    height: 40%;
+    overflow: hidden;
+    padding: 0px;
+    bottom: 0px;
+}
+.breaking .imgmain {
+    float: left;
     width: 67%;
     height: 100%;
-    overflow: hidden;
-    
 }
-.breaking p {
+.imgmain img{
+    object-fit: cover;
+    height: 100%;
+}
+.breaking p{
     margin-left: 650px;
 }
 .cell p {
     padding: 30px;
-
 }
 .gridCV {
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    width: 980px;
-    overflow: hidden;
-    padding: 10px 10px 10px 0px;
+    grid-template-rows: 1fr;
     margin-top: 0px;
     padding-top: 0px;
 }
-.buttonLM {
-    position: relative;
-}
 .loadMore {
+    position: relative;
     border-radius: 5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
@@ -249,6 +222,7 @@ h1 {
     font-weight: lighter;
     padding-bottom: 0;
     margin-bottom: 0px;
+    scroll-snap-type: none;
 }
 .videosMI {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -452,7 +426,6 @@ em:hover{
     padding-top: 0;
     display: flex;
     margin: auto;
-    
 }
 .containerFooter {
     display: block;
@@ -538,7 +511,6 @@ em:hover{
     padding-right: 15px;
 }
 .copyright{
-   
     display: flex;
     margin: auto;
     padding-top: 8px;
@@ -546,6 +518,14 @@ em:hover{
 .other {
     padding-bottom: 30px;
 }
+
 /* to fix: menu in the header goes over articles, shimmer border, 
-images in cells to not resize, width to be adjustable, 
-videos menu not to move, sccroll horizontally videos/
+features images in cells to not resize, width to be adjustable, 
+videos menu not to move, scroll horizontally videos*/
+
+
+@media screen and (max-width: 768px) {
+	body {
+        width: 80%
+    }
+}
