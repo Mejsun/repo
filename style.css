@@ -2,6 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     width: auto;
+    box-sizing: border-box;
 }
 header {
     height: 150px;
@@ -12,9 +13,7 @@ header {
     background: linear-gradient(193deg, rgba(255,255,255,1) 0%, rgba(218,217,215,1) 100%);
     width: screen-size;
 }
-.wrapper {
-    position: relative;
-}
+.wrapper {position: relative;}
 img {
     margin-top: 20px;
     margin-left: 50px;
@@ -80,9 +79,7 @@ th, td {
     border-bottom: solid black 1px;
     margin: 5px;
 }
-table {
-    position: fixed;
-}
+table {position: fixed;}
 .adBanner {
     padding: 25px;
     text-align: center;
@@ -118,13 +115,13 @@ h1 {
     overflow: hidden;
     padding: 10px 10px 10px 0px;
 }
-.cell:hover {
+.cell:hover, .cellF:hover {
     text-decoration: underline;
     cursor: pointer;
     transition: 0.5s;
     background:inherit;
 }
-.cell:hover img {
+.cell:hover img, .cellF:hover img {
     transform: scale(1.1);
     overflow: hidden;
     transition: 0.5s ease;
@@ -161,7 +158,7 @@ h1 {
     display: inline-block;
     box-sizing: border-box;
 }
-.imgmain {
+.imgmain, .imgF {
     margin: 0px;
     height: 40%;
     overflow: hidden;
@@ -173,16 +170,21 @@ h1 {
     width: 67%;
     height: 100%;
 }
-.imgmain img{
+.imgF {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.imgF img{
+    width: 100%;
+    margin: 0;  
+}
+.imgmain img, .imgF img{
     object-fit: cover;
     height: 100%;
 }
-.breaking p{
-    margin-left: 650px;
-}
-.cell p {
-    padding: 30px;
-}
+.breaking p{margin-left: 650px;}
+.cell p {padding: 30px;}
 .gridCV {
     grid-template-rows: 1fr;
     margin-top: 0px;
@@ -201,6 +203,7 @@ h1 {
     justify-content: center;
     display: flex;
     margin: auto;
+    margin-bottom: 30px;
 }
 .loadMore:hover {
     color: white;
@@ -210,47 +213,47 @@ h1 {
 .containerVideos {
     background-color: rgb(38, 38, 126);
     color: white;
-    height: fit-content;
-    padding-right: 0px;
-    margin-right: 0px;
+    height: 380px;
     width: 980px;
     overflow-x: scroll;
-    margin-top: 30px;
 }
+.containerVideos::-webkit-scrollbar{height:15px;}
+.containerVideos::-webkit-scrollbar-thumb {
+    background: rgb(213, 213, 218);
+    border-radius: 10px;
+  }
 .containerVideos h1 {
     color: white;
     font-weight: lighter;
-    padding-bottom: 0;
-    margin-bottom: 0px;
-    scroll-snap-type: none;
+    margin: 10px 0px 0px 20px;
 }
 .videosMI {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     color: white;
     margin-right: 40px;
-    margin-top: 0px;
     padding-bottom: 20px;
     margin-left: -20px;
     display: inline-block;
+    border-bottom: 2px solid rgb(38, 38, 126)
 }
-.videosMI:hover {
-    border-bottom: 2px solid white;
-}
+.videosMI:hover {border-bottom: 2px solid white;}
 .videosMenu {
-    border-bottom: 1px solid rgb(247, 247, 247);
+    border-bottom: 1px solid rgb(247, 247, 247) ;
     display: inline-block;
-    width: 1000px;
+    width: 1300px;
     margin-left: 25px;
     position: relative
 }
+.videos{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+}
 video {
-    padding-top: 20px;
-    padding-bottom: 20px;
     width: 250px;
     height: 150px;
-    margin-left: 20px;
-    padding-left: 0px;
+    padding: 20px 15px 0px 15px;
 }
 .gridA {
     display: grid;
@@ -261,18 +264,6 @@ video {
     overflow: hidden;
     padding: 10px 10px 10px 0px;
 }
-.cellA:hover {
-    cursor: pointer;
-    transition: 0.5s;
-    background:inherit;
-}
-.cellA:hover h2 {
-    color: black;
-    text-decoration: none;
-}
-.cellA:hover p{
-    text-decoration: underline;
-}
 .cellA img {
     border-radius: 50%;
     padding: 50px;
@@ -280,28 +271,29 @@ video {
     width: 50%;
     margin:auto;
     display: flex;
-    
+}
+.cellA {
+    text-align: center;
+    height: 600px;
 }
 .cellA h2 {
     font-size: 15px;
     font-weight: lighter;
     color:rgb(4, 4, 167);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding:0;
-    margin: 0;
 }
-.cellA {
-    text-align: center;
-    height: 600px;
-}
-.cellA p{
-    margin:0;
-    padding: 0px 20px 0px 20px;
-}
+.cellA p{padding: 0px 20px 0px 20px;}
 .cell3A {
     justify-content: center;
     text-align: center;
     background-color: black;
+}
+.cellA:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background:inherit;
+    color: black;
+    text-decoration: underline;
 }
 .gridF {
     height: auto;
@@ -313,29 +305,7 @@ video {
     overflow: hidden;
     padding: 10px 10px 10px 0px;
 }
-.cellF:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    transition: 0.5s;
-    background:inherit;
-}
-.cellF:hover img {
-    transform: scale(1.1);
-    overflow: hidden;
-    transition: 0.5s ease;
-    display: inline-block;
-}
-.cellF img {
-    float: left;
-    padding: 0px;
-    margin: 0px;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-.cellF {
-    height: 250px;
-}
+.cellF {height: 250px;}
 .cellF p {
     padding-left: 500px;
     font-size: 30px;
@@ -351,15 +321,12 @@ video {
     grid-gap: 20px;
 }
 .cellAS img {
-    padding: 0px;
     margin: 0px;
     width: 100%;
     height: 50%;
     overflow: hidden;
 }
-.cellAS {
-    height: 550px;
-}
+.cellAS {height: 550px;}
 .cellAS p {
     padding: 50px 25px 50px 25px;
     font-size: 30px;
@@ -377,7 +344,6 @@ video {
     background-color: white;
     border: rgb(238, 236, 236) solid 5px;
     text-align: left;
-    height: 400px;
     width: auto;
     font-weight: light;
     font-size: 17px;
@@ -394,11 +360,8 @@ video {
     grid-gap: 20px;
 }
 .cellMR {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px 10px 20px;
     height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 .number {
     font-size: 25px;
@@ -407,7 +370,6 @@ video {
     font-style: normal;
     display: inline;
     padding: 0px;
-    margin: 0px;
     float:left;
 }
 hr {
@@ -418,9 +380,7 @@ hr {
     text-decoration: underline;
     cursor: pointer;
 }
-em:hover{
-    text-decoration: none;
-}
+em:hover{text-decoration: none;}
 .cellMR p {
     padding-left: 30px;
     padding-top: 0;
@@ -442,11 +402,7 @@ em:hover{
     display: block;
     margin-left: -35px;
 }
-.footerSMLI {
-    margin-left: 0px;
-    padding-left: 0px;
-    margin-right: 40px;
-}
+.footerSMLI {margin-right: 40px}
 .footerSM img {
     padding: 0px;
     margin: 0px;
@@ -470,18 +426,12 @@ em:hover{
     font-size: 20px;
     font-weight: lighter;
     padding-left: 20px;
-    padding-bottom: 0px;
     margin-bottom: 0px;
 }
-.footerList {
-    padding:0px;
-    padding-left: 25px;
-}
+.footerList {padding-left: 25px;}
 .footerListLI {
     width: 230px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding: 5px 0px 5px 5px;
     display: block;
 }
 .footerListLI:hover {
@@ -491,7 +441,6 @@ em:hover{
 }
 .footerOther {
     font-size: 14px;
-    padding: 0px;
     padding-bottom: 20px;
 }
 .FOlistLI {
@@ -504,28 +453,13 @@ em:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+.other {padding-bottom: 30px;}
 .footerimg {
     float: left;
-    padding: 0px;
     margin: 0px;
     padding-right: 15px;
 }
-.copyright{
-    display: flex;
-    margin: auto;
-    padding-top: 8px;
-}
-.other {
-    padding-bottom: 30px;
-}
+.copyright{padding-top: 5px;}
 
 /* to fix: menu in the header goes over articles, shimmer border, 
-features images in cells to not resize, width to be adjustable, 
-videos menu not to move, scroll horizontally videos*/
-
-
-@media screen and (max-width: 768px) {
-	body {
-        width: 80%
-    }
-}
+responsive sizing*/
